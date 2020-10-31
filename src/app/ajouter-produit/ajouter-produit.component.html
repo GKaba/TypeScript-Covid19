@@ -1,0 +1,32 @@
+<div class="container">
+  <div id="add" class="page-header">
+
+      <div class="container">
+          <h3 class=" h1-responsive font-weight-bold text-center my-4 ">AJOUTER PRODUIT</h3>
+          <div class="line"></div>
+      </div>
+      <div class="row">
+          <div class=" container col-md-12 mb-md-0 mb-5 ">
+              <form id="add-product" name="add-product " method="post" enctype="multipart/form-data">
+                  <div class="row">
+                      <div class="col-md-12 ">
+                          <label for="name" class="p-2 ">id Produit:</label>
+                          <input type="text"  id="name" name="name" class="form-control form-inline formName" (keyup)="onKeyname($event)">
+                      </div>
+                      <div class="col-md-12 ">
+                          <label for="price " class=" p-2">Prix:</label>
+                          <input type="text"  id="price" name="price" class="form-control formPrice" (keyup)="onKeyprix($event)">
+                      </div>
+                      <div class="col-md-12 ">
+                          <label for="photo " class="p-2">image Produit :</label>
+                          <input type="file" id="files" name="files" class="form-control p-1 btn-dange formPhoto" accept="image/*" multiple="false" (change)="filechange($event)">
+                      </div>
+                  </div>
+              </form>
+              <div class="text-center text-md-left pt-3 ">
+                  <button (click)="ajoutetoliste()" type="button " class="add-products btn btn-lg btn-danger" >Ajouter</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

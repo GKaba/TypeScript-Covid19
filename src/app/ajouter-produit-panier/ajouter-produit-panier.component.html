@@ -1,0 +1,15 @@
+<div *ngFor="let produit of achat;let i=index;" class="cart-items">
+  <div class="cart-row ">
+    <div   class="cart-item cart-column">
+      <img class="cart-item-image" src={{produit.img}} width="100" height="100">
+      <span class="cart-item-title" >{{produit.id}}</span>
+    </div>
+    <span class="cart-price cart-column">{{produit.Prix}}$</span>
+    <div class="cart-quantity cart-column">
+      <input class="cart-quantity-input" type="number" *ngIf="{value:produit.qty>0?produit.qty:rmproduit(produit)}" [(ngModel)]='produit.qty'/>
+      <span>
+      <a (click)="rmproduit(produit)" role="button"><i class="far removItem fa-trash-alt"></i></a>
+      </span>
+    </div>
+  </div>
+</div>
